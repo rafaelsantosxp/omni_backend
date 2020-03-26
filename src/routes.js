@@ -1,18 +1,18 @@
+// import express from node_modules
 const express = require ('express');
-const crypto = require ('crypto');
 
+// Disengage Router module from express
 const routes = express.Router();
 
+routes.post('/users', (request, response) => {
+    const rbody = request.body;
 
-routes.post('/ongs', (request, response) => {
-    const data = request.body;
-    //const { name, email, whatsapp, city, uf} = request.body;
+    console.log(rbody);
 
-    //const id = crypto.randomBytes(4).toString('HEX');
-
-    console.log(data);
-
-    return response.json();
-});
+    return response.json({
+        evento: 'Semana Omnistack 11',
+        aluno: 'Rafael Santos'
+    });
+})
 
 module.exports = routes;

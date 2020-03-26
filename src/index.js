@@ -1,14 +1,14 @@
+// import express from node_modules
 const express = require ('express');
-const app = express();
-const routes = require('./routes');
+// import routes from ./routes
+const routes = require ('./routes');
+// Create app with express module functions
+const omniapp = express();
+// App understand .json posts
+omniapp.use(express.json());
 
+// Use imported routes
+omniapp.use(routes);
 
-app.use(express.json());
-routes.use(routes)
-/**
- * Get, post, put, delete 
- * Query Params > Params nomeados enviados após "?" (Filtros, paginação)
- * Route Params > Params utilizados para identificar recursos
- */
-
-app.listen(3333);
+// App listen on port 3333
+omniapp.listen(3333);
