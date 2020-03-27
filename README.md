@@ -2,9 +2,9 @@
 
 Install nodejs / npm
 
-npm init - > to create package.json
-npm install express
-npm install knex
+npm init - > to create package.json /
+npm install express /
+npm install knex /
 
 npm install nodemon -D
 
