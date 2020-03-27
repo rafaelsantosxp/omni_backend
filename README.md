@@ -1,4 +1,4 @@
-# omni_backend
+# omni_backend steps to create this app
 
 Install nodejs / npm
 
@@ -14,5 +14,31 @@ npm install nodemon -D
  * Route Params > Params utilizados para identificar recursos
  */
 
+npx knex init
+npx knex migrate:make  create_ongs // Create migrations
+npx knex migrate:make  create_incidents // Create migrations
+
+// executa o knex
+npx knex migrate:latest
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+----------------
 
 // npx create-react-app frontend
